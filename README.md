@@ -1,3 +1,6 @@
 #PseudoCode
 ##Premise of game
-an average mom wigh 100kg now if you times it by 10 she is 1000kg 👌
+
+
+
+imagine 4 moms ganging up on you and they have your bike
