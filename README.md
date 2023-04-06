@@ -1,1 +1,2 @@
-# guessthephrase
+#PseudoCode
+##Premise of game
