@@ -82,3 +82,5 @@ set ball position to middle and do direction coinflip again
 ballX<=(Score2) paddleplayer1score++
 set ball position to middle and do direction coinflip again
 
+
+
