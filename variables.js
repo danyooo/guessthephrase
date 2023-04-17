@@ -1,11 +1,8 @@
+//puzzle screen
+let screen = 1;
+let img;
 // Set array for possible words to guess
-// let StartPageImg;
-let screen = 0;
-// when guessing is done, screen++ 
-// that means screen is now 1
-// when screen is screen one remove the background of guessing screen
 let puzzleOptions = ["pseudocode","test","giraffe", "paleontologist", "cryogenesis", "ambidexterous", "world wide",]
-
 let puzzle;
 let lettersleft = 0;
 // make an array to contain all the guesses made
@@ -20,8 +17,9 @@ let guess = {
 x: 50,
 y:150,
 spacing: 30
-
 }
+
+
 // variables
 //scores
 let player1Score = 0;
@@ -39,10 +37,10 @@ let ball = {
 x: 50,
 y: 50,
   //speed
-speedX: 3,
-speedY:3,
+speedX: 0,
+speedY:0,
   //speed
-color: "red",
+color: "blue",
   // radius
 r: 15,
 }
@@ -57,13 +55,14 @@ color: "blue",
 speedY: 10
 
 }
-// ## paddleplayer1
+// ## paddleplayer1 (left paddle)
  let paddleplayer1 = { 
 // position
-   x: -10,
-
-  y:10,
-  h: 10
+   // dont set this as 0 will always be the left side and will scale the same
+   x: 50,
+// set the Y later on after drawing the canvas 
+  y:0,
+  h: 150
    
 
  }
@@ -71,12 +70,14 @@ speedY: 10
 
 
 
-// ## paddleplayer2
+// ## paddleplayer2 (right paddle)
  let paddleplayer2 = { 
 // position
-    x: 10,
-   y: 10,
-h: 10
+    //Set the X later on after drawing the canvas
+    x: 0,
+    //Set the Y later on after drawing the canvas
+   y: 0,
+h: 150
   
 
 
@@ -96,21 +97,29 @@ let arena = {
 //Goal lines
 //position
 //left goal
-let Goal1X;
-let Goal1Y;
+let goal1 = {
 
-let Goal1X2
-let Goal1Y2
+X1: 0,
+Y1: 0,
+X2: 0,
+Y2: 0,
 
-//right goal
-let Goal2X;
-let Goal2Y;
+}
+// right goal
+let goal2 = {
+X1: 0,
+Y1: 0,
 
-let Goal2X2;
-let Goal2Y2;
+X2: 0,
+Y2: 0,
+
+}
+
 
 //set color of goals to red
 let GoalColor = ('red')
+
+
 
 
 
