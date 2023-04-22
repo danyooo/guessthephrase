@@ -274,7 +274,7 @@ text("each player will take turns guessing. The goal is to guess the word correc
 
   textSize(10)
 fill("black")
-text("The player's turns rotate every time a guess is wrong",windowWidth / 2, 110)
+text("The player's turns rotate every time a guess is correct",windowWidth / 2, 110)
 
   textSize(10)
 fill("black")
@@ -366,30 +366,33 @@ lettersleft -= Array.from(puzzle).filter(letter => letter === guessedletter).len
   // put the correct letter into the guesses array
 guesses[i] = guessedletter
 hits++
+playerturn *=-1
+
 print("letters left are " + lettersleft)
 
 }
 }
 
 if(hits == 0){
-  let player1wrongguesses = 0
-  let player2wrongguesses = 0
+  
 incorrectGuesses.push(guessedletter)
-playerturn *=-1
+
 // if it's player 1's turn, decrease player 1's paddle size
 if(playerturn == -1){
   if(screen ==0){
-  player1wrongguesses++
-    // exponentially decrease paddle size the more wrong guesses are made
-paddleplayer1.h -= 2 * player2wrongguesses
+  
+   
+paddleplayer1.h -= 2
+print("player 1 guessed wrong lol")
 }
 }
 // otherwise ,it's player 2's turn, so decrease their paddle size
 else{
   if(screen == 0){
-    player2wrongguesses++
-    // exponentially decrease paddle size the more wrong guesses are  made
-paddleplayer2.h -= 2 * player2wrongguesses
+  
+    
+paddleplayer2.h -=2
+print("player 2 guessed wrong lol")
   }
 }
 }
